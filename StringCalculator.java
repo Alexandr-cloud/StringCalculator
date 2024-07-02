@@ -71,9 +71,11 @@ public class StringCalculator {
     }
 
     static void printInQuotes(String text) {
-        System.out.print(text);
-        if (text.length() > 40) {
-            System.out.println(" " + text.substring(0, 40) + "..." + " ");
+
+        if (text.length() >= 40) {
+            System.out.println(text.substring(0, 40) + "...");
+        } else {
+            System.out.print(text);
         }
     }
 }
